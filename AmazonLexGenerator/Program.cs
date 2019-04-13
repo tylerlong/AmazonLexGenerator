@@ -7,14 +7,44 @@ namespace AmazonLexGenerator
     {
         static void Main(string[] args)
         {
-            var intents = new Intent[]
+            var helloUtterances = new[]
             {
-                new Intent("Hello",
-                    new[] {"hello", "hi", "hey", "hi there", "good morning", "good afternoon", "good evening"},
-                    null),
-                new Intent("CallerId", null, null).AddCartesianUtterances(
-                    new[] {"", "view", "see", "show", "get"}, new[] {"caller ID", "callerID"},
-                    new[] {"", "info", "information", "settings"}),
+                "hello", "hi", "hey", "hi there",
+                "good morning", "good afternoon", "good evening"
+            };
+            var helloIntent = new Intent("Hello", helloUtterances, null);
+
+            var callerIDUtterances = new[] {"", "view", "see", "show", "get"}
+                .Cartesian(new[] {"caller ID", "callerID"})
+                .Cartesian(new[] {"", "info", "information", "settings"});
+            var callerIDIntent = new Intent("CallerID", callerIDUtterances, null);
+
+            var businessHoursUtterances = new[] {"", "view", "see", "show", "get", "list"}
+                .Cartesian(new[]
+                {
+                    "business hours",
+                    "{businessHoursType} business hours",
+                    "business hours for {businessHoursType}"
+                }).Variant("hours", "hour");
+            var businessHoursSlotUtterances = new[]
+                    {"{businessHoursType} business hours", "business hours for {businessHoursType}"}
+                .Variant("hours", "hour");
+            var valueElicitationPrompt = new ValueElicitationPrompt(new[]
+            {
+                new Message("**personal** business hours or **company** company hours?")
+            });
+            var businessHoursSlots = new[]
+            {
+                new Slot("businessHoursType", "BusinessHoursType",
+                    businessHoursSlotUtterances, valueElicitationPrompt)
+            };
+            var businessHoursIntent = new Intent("BusinessHours", businessHoursUtterances, businessHoursSlots);
+
+            var intents = new[]
+            {
+                helloIntent,
+                callerIDIntent,
+                businessHoursIntent
             };
             var slotTypes = new SlotType[] { };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
