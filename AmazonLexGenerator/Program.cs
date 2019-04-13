@@ -40,11 +40,26 @@ namespace AmazonLexGenerator
             };
             var businessHoursIntent = new Intent("BusinessHours", businessHoursUtterances, businessHoursSlots);
 
+            var companyBillingPlanUtterances = new[] {"", "view", "see", "show", "get"}
+                .Cartesian(new[] {"company billing plan"});
+            var companyBillingPlanIntent = new Intent("CompanyBillingPlan", companyBillingPlanUtterances, null);
+            
+            var companyGreetingsUtterances = new[] {"", "view", "see", "show", "get"}
+                .Cartesian(new[] {"company greetings"}).Variant("greetings", "greeting");
+            var companyGreetingsIntent = new Intent("CompanyGreetings", companyGreetingsUtterances, null);
+            
+            var companyInfoUtterances = new[] {"", "view", "see", "show", "get"}
+                .Cartesian(new[] {"company"}).Cartesian(new[] {"info", "information", "details"});
+            var companyInfoIntent = new Intent("CompanyInfoIntent", companyInfoUtterances, null);
+
             var intents = new[]
             {
                 helloIntent,
                 callerIDIntent,
-                businessHoursIntent
+                businessHoursIntent,
+                companyBillingPlanIntent,
+                companyGreetingsIntent,
+                companyInfoIntent
             };
             var slotTypes = new SlotType[] { };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
