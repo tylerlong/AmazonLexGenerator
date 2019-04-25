@@ -11,6 +11,10 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                     {"company", "office", "enterprise", "organization", "institute", "institution"}
                 )
             };
+            promptMessage = "**personal** business hours or **company** business hours?";
+            sampleUtterances = new[]
+                    {"{businessHoursType} business hours", "business hours for {businessHoursType}"}
+                .Variant("hours", "hour");
         }
     }
 }

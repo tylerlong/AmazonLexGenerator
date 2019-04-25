@@ -38,5 +38,9 @@ namespace AmazonLexGenerator
         )
         {
         }
+
+        public Slot(SlotType slotType) : this(slotType, slotType.sampleUtterances, slotType.promptMessage)
+        {
+        }
     }
 }
