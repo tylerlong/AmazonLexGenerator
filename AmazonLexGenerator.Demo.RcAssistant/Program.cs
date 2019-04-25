@@ -1,19 +1,12 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace AmazonLexGenerator
+namespace AmazonLexGenerator.Demo.RcAssistant
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var helloUtterances = new[]
-            {
-                "hello", "hi", "hey", "hi there",
-                "good morning", "good afternoon", "good evening"
-            };
-            var helloIntent = new Intent("Hello", helloUtterances, null);
-
             var callerIDUtterances = new[] {"", "view", "see", "show", "get"}
                 .Cartesian(new[] {"caller ID", "callerID"})
                 .Cartesian(new[] {"", "info", "information", "settings"});
@@ -44,7 +37,7 @@ namespace AmazonLexGenerator
                 new EnumerationValue(new[] {"personal", "my", "for me", "for myself"}),
                 new EnumerationValue(new[]
                     {"company", "office", "enterprise", "organization", "institute", "institution"}
-                ),
+                )
             });
 
             var companyBillingPlanUtterances = new[] {"", "view", "see", "show", "get"}
@@ -61,7 +54,7 @@ namespace AmazonLexGenerator
 
             var intents = new[]
             {
-                helloIntent,
+                new HelloIntent(),
                 callerIDIntent,
                 businessHoursIntent,
                 companyBillingPlanIntent,

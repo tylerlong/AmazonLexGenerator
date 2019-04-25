@@ -10,7 +10,7 @@ namespace AmazonLexGenerator
         public string[] sampleUtterances;
         public Slot[] slots;
 
-        public Intent(string name, string[] sampleUtterances, Slot[] slots)
+        public Intent(string name, string[] sampleUtterances, Slot[] slots = null)
         {
             this.name = name;
             this.sampleUtterances = sampleUtterances;
