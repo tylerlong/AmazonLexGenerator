@@ -39,15 +39,22 @@ namespace AmazonLexGenerator
                     businessHoursSlotUtterances, valueElicitationPrompt)
             };
             var businessHoursIntent = new Intent("BusinessHours", businessHoursUtterances, businessHoursSlots);
+            var businessHoursType = new SlotType("BusinessHoursType", "Business Hours Type", new[]
+            {
+                new EnumerationValue(new[] {"personal", "my", "for me", "for myself"}),
+                new EnumerationValue(new[]
+                    {"company", "office", "enterprise", "organization", "institute", "institution"}
+                ),
+            });
 
             var companyBillingPlanUtterances = new[] {"", "view", "see", "show", "get"}
                 .Cartesian(new[] {"company billing plan"});
             var companyBillingPlanIntent = new Intent("CompanyBillingPlan", companyBillingPlanUtterances, null);
-            
+
             var companyGreetingsUtterances = new[] {"", "view", "see", "show", "get"}
                 .Cartesian(new[] {"company greetings"}).Variant("greetings", "greeting");
             var companyGreetingsIntent = new Intent("CompanyGreetings", companyGreetingsUtterances, null);
-            
+
             var companyInfoUtterances = new[] {"", "view", "see", "show", "get"}
                 .Cartesian(new[] {"company"}).Cartesian(new[] {"info", "information", "details"});
             var companyInfoIntent = new Intent("CompanyInfoIntent", companyInfoUtterances, null);
@@ -61,7 +68,10 @@ namespace AmazonLexGenerator
                 companyGreetingsIntent,
                 companyInfoIntent
             };
-            var slotTypes = new SlotType[] { };
+            var slotTypes = new[]
+            {
+                businessHoursType
+            };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
             {
