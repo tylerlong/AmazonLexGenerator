@@ -11,21 +11,16 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                     "{businessHoursType} business hours",
                     "business hours for {businessHoursType}"
                 }).Variant("hours", "hour");
-            slots = new[] {new BusinessHoursTypeSlot()};
-        }
-    }
-
-    class BusinessHoursTypeSlot : Slot
-    {
-        public BusinessHoursTypeSlot() : base("businessHoursType", "BusinessHoursType", null, null)
-        {
-            sampleUtterances = new[]
-                    {"{businessHoursType} business hours", "business hours for {businessHoursType}"}
-                .Variant("hours", "hour");
-            valueElicitationPrompt = new ValueElicitationPrompt(new[]
+            slots = new[]
             {
-                new Message("**personal** business hours or **company** business hours?")
-            });
+                new Slot(
+                    new BussinessHoursType(),
+                    new[]
+                            {"{businessHoursType} business hours", "business hours for {businessHoursType}"}
+                        .Variant("hours", "hour"),
+                    "**personal** business hours or **company** business hours?"
+                )
+            };
         }
     }
 }
