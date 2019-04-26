@@ -24,7 +24,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 // todo: edit user status intent
                 // todo: get services intent
                 new HelloIntent(),
-                // todo: help intent
+                new HelpIntent(), 
                 new NotificationSettingsIntent(),
                 new PersonalInfoIntent(),
                 new PresenceInfoIntent(),

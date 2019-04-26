@@ -9,7 +9,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             sampleUtterances = new[] {"", "view", "see", "show", "get", "list"}
                 .Cartesian(
                     new[] {"presence", "status"}.Cartesian(new[] {"", "info", "information", "details"})
-                        .Concat(new []{ "do not disturb", "dnd", "user" }.Cartesian(new[] { "status" })).ToArray()
+                        .Concat(new[] {"do not disturb", "dnd", "user"}.Cartesian(new[] {"status"})).ToArray()
                 );
         }
     }

@@ -11,7 +11,8 @@ namespace AmazonLexGenerator
 
         public static string[] Variant(this string[] original, string subStr, string newSubStr)
         {
-            return original.Concat(original.Select(s => s.Replace(subStr, newSubStr))).ToArray();
+            return original.Concat(original.Where(s => s.Contains(subStr))
+                .Select(s => s.Replace(subStr, newSubStr))).ToArray();
         }
     }
 }

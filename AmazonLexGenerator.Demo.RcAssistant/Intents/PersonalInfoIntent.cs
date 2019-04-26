@@ -6,7 +6,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
         {
             sampleUtterances = new[] {"", "view", "see", "show", "get"}
                 .Cartesian(new[] {"", "my"})
-                .Cartesian(new[] {"personal"}).Cartesian(new[] {"info", "information", "details"});
+                .Cartesian(new[] {"personal"}).Cartesian(new[] {"info", "information", "details", "settings"});
         }
     }
 }
