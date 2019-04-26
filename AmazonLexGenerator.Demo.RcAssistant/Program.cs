@@ -25,13 +25,14 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 // todo: get services intent
                 new HelloIntent(),
                 // todo: help intent
-                // todo: notifiation settings intent
-                new PersonalInfoIntent(), 
+                new NotifictaionSettingsIntent(),
+                new PersonalInfoIntent(),
                 new PresenceInfoIntent(),
             };
-            var slotTypes = new[]
+            var slotTypes = new SlotType[]
             {
-                new BussinessHoursType()
+                new BussinessHoursType(),
+                new NotificationSettingsType(),
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
