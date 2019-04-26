@@ -15,6 +15,8 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new CompanyBillingPlanIntent(),
                 new CompanyGreetingIntent(),
                 new CompanyInfoIntent(),
+                new CompanyServicePlanIntent(),
+                new CompanyTimeZoneIntent(),
             };
             var slotTypes = new[]
             {
