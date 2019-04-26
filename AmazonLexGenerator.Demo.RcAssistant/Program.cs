@@ -7,16 +7,19 @@ namespace AmazonLexGenerator.Demo.RcAssistant
     {
         static void Main(string[] args)
         {
-            var intents = new Intent []
+            var intents = new Intent[]
             {
                 new BusinessHoursIntent(),
                 new CallerIdIntent(),
-                new HelloIntent(),
                 new CompanyBillingPlanIntent(),
                 new CompanyGreetingIntent(),
                 new CompanyInfoIntent(),
                 new CompanyServicePlanIntent(),
                 new CompanyTimeZoneIntent(),
+                new EditBusinessHoursIntent(),
+                new EditCallerIdIntent(),
+
+                new HelloIntent(),
             };
             var slotTypes = new[]
             {

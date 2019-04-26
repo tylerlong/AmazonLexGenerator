@@ -29,8 +29,8 @@ namespace AmazonLexGenerator
         }
 
         public Slot(SlotType slotType, string[] sampleUtterances, string promptMessage) : this(
-            slotType, 
-            sampleUtterances, 
+            slotType,
+            sampleUtterances,
             new ValueElicitationPrompt(new[]
             {
                 new Message(promptMessage)
