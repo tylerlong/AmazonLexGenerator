@@ -1,8 +1,8 @@
 namespace AmazonLexGenerator.Demo.RcAssistant
 {
-    public class BussinessHoursType : SlotType
+    public class BusinessHoursType : SlotType
     {
-        public BussinessHoursType() : base("BusinessHoursType", "Business Hours Type", null)
+        public BusinessHoursType() : base("BusinessHoursType", "Business Hours Type", null)
         {
             enumerationValues = new[]
             {

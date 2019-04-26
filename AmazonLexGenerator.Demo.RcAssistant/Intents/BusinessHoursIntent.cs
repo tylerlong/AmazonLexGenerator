@@ -13,7 +13,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 }).Variant("hours", "hour");
             slots = new[]
             {
-                new Slot(new BussinessHoursType())
+                new Slot(new BusinessHoursType())
             };
         }
     }

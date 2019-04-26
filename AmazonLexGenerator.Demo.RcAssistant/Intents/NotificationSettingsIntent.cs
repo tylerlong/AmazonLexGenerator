@@ -1,8 +1,8 @@
 namespace AmazonLexGenerator.Demo.RcAssistant
 {
-    public class NotifictaionSettingsIntent : Intent
+    public class NotificationSettingsIntent : Intent
     {
-        public NotifictaionSettingsIntent() : base("NotifictaionSettingsIntent", null)
+        public NotificationSettingsIntent() : base("NotificationSettingsIntent", null)
         {
             sampleUtterances = new[] {"", "view", "see", "show", "get", "list"}
                 .Cartesian(new[]
