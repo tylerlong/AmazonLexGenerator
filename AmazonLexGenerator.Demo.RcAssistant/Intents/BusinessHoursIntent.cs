@@ -2,7 +2,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
 {
     public class BusinessHoursIntent : Intent
     {
-        public BusinessHoursIntent() : base("BusinessHours", null)
+        public BusinessHoursIntent() : base("BusinessHoursIntent", null)
         {
             sampleUtterances = new[] {"", "view", "see", "show", "get", "list"}
                 .Cartesian(new[]

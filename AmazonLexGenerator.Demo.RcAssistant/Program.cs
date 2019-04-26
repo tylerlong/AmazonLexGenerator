@@ -7,26 +7,14 @@ namespace AmazonLexGenerator.Demo.RcAssistant
     {
         static void Main(string[] args)
         {
-            var companyBillingPlanUtterances = new[] {"", "view", "see", "show", "get"}
-                .Cartesian(new[] {"company billing plan"});
-            var companyBillingPlanIntent = new Intent("CompanyBillingPlan", companyBillingPlanUtterances, null);
-
-            var companyGreetingsUtterances = new[] {"", "view", "see", "show", "get"}
-                .Cartesian(new[] {"company greetings"}).Variant("greetings", "greeting");
-            var companyGreetingsIntent = new Intent("CompanyGreetings", companyGreetingsUtterances, null);
-
-            var companyInfoUtterances = new[] {"", "view", "see", "show", "get"}
-                .Cartesian(new[] {"company"}).Cartesian(new[] {"info", "information", "details"});
-            var companyInfoIntent = new Intent("CompanyInfoIntent", companyInfoUtterances, null);
-
-            var intents = new[]
+            var intents = new Intent []
             {
-                new HelloIntent(),
-                new CallerIdIntent(),
                 new BusinessHoursIntent(),
-                companyBillingPlanIntent,
-                companyGreetingsIntent,
-                companyInfoIntent
+                new CallerIdIntent(),
+                new HelloIntent(),
+                new CompanyBillingPlanIntent(),
+                new CompanyGreetingIntent(),
+                new CompanyInfoIntent(),
             };
             var slotTypes = new[]
             {

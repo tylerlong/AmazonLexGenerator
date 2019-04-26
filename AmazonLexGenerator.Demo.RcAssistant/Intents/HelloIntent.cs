@@ -2,7 +2,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
 {
     public class HelloIntent : Intent
     {
-        public HelloIntent() : base("Hello", null)
+        public HelloIntent() : base("HelloIntent", null)
         {
             sampleUtterances = new[]
             {
