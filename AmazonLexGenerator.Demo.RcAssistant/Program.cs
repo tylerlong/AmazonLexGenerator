@@ -18,8 +18,16 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new CompanyTimeZoneIntent(),
                 new EditBusinessHoursIntent(),
                 new EditCallerIdIntent(),
-
+                // todo: edit dnd status intent
+                // todo: edit notification settings intent
+                new EditPersonalInfoIntent(),
+                // todo: edit user status intent
+                // todo: get services intent
                 new HelloIntent(),
+                // todo: help intent
+                // todo: notifiation settings intent
+                new PersonalInfoIntent(), 
+                new PresenceInfoIntent(),
             };
             var slotTypes = new[]
             {
