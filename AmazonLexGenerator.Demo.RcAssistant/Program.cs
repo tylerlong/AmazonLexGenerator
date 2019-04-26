@@ -33,6 +33,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             {
                 new BusinessHoursType(),
                 new NotificationSettingsType(),
+                new HelpType(), 
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
