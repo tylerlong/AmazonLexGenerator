@@ -36,6 +36,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new HelpType(),
                 new ServiceAvailabilityType(),
                 new UserStatusType(),
+                new DndStatusType(),
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
