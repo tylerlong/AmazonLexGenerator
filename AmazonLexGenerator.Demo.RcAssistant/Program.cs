@@ -22,9 +22,9 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 // todo: edit notification settings intent
                 new EditPersonalInfoIntent(),
                 // todo: edit user status intent
-                // todo: get services intent
+                new ServicesIntent(),
                 new HelloIntent(),
-                new HelpIntent(), 
+                new HelpIntent(),
                 new NotificationSettingsIntent(),
                 new PersonalInfoIntent(),
                 new PresenceInfoIntent(),
@@ -33,7 +33,8 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             {
                 new BusinessHoursType(),
                 new NotificationSettingsType(),
-                new HelpType(), 
+                new HelpType(),
+                new ServiceAvailabilityType(),
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
