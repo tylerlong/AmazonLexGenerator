@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace AmazonLexGenerator.Demo.RcAssistant
@@ -41,8 +42,8 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new NotificationSettingsAlertType(),
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
-            lex.Prefixify(); // prefix intents and slot types with resource name to avoid naming collision
-            Console.WriteLine(lex.ToJsonString());
+            lex.Prefixify(); // prefix intents and slot types with resource name to avoid naming collisions
+            File.WriteAllText("lex.json", lex.ToJsonString());
         }
     }
 }

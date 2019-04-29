@@ -1,0 +1,1266 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "RcAssistant",
+    "version": "1",
+    "intents": [
+      {
+        "name": "RcAssistantBusinessHoursIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "business hours",
+          "{businessHoursType} business hours",
+          "business hours for {businessHoursType}",
+          "view business hours",
+          "view {businessHoursType} business hours",
+          "view business hours for {businessHoursType}",
+          "see business hours",
+          "see {businessHoursType} business hours",
+          "see business hours for {businessHoursType}",
+          "show business hours",
+          "show {businessHoursType} business hours",
+          "show business hours for {businessHoursType}",
+          "get business hours",
+          "get {businessHoursType} business hours",
+          "get business hours for {businessHoursType}",
+          "list business hours",
+          "list {businessHoursType} business hours",
+          "list business hours for {businessHoursType}",
+          "business hour",
+          "{businessHoursType} business hour",
+          "business hour for {businessHoursType}",
+          "view business hour",
+          "view {businessHoursType} business hour",
+          "view business hour for {businessHoursType}",
+          "see business hour",
+          "see {businessHoursType} business hour",
+          "see business hour for {businessHoursType}",
+          "show business hour",
+          "show {businessHoursType} business hour",
+          "show business hour for {businessHoursType}",
+          "get business hour",
+          "get {businessHoursType} business hour",
+          "get business hour for {businessHoursType}",
+          "list business hour",
+          "list {businessHoursType} business hour",
+          "list business hour for {businessHoursType}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "{businessHoursType} business hours",
+              "business hours for {businessHoursType}",
+              "{businessHoursType} business hour",
+              "business hour for {businessHoursType}"
+            ],
+            "slotType": "RcAssistantBusinessHoursType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "**personal** business hours or **company** business hours?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "businessHoursType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantCallerIdIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "caller ID",
+          "caller ID info",
+          "caller ID information",
+          "caller ID settings",
+          "callerId",
+          "callerId info",
+          "callerId information",
+          "callerId settings",
+          "view caller ID",
+          "view caller ID info",
+          "view caller ID information",
+          "view caller ID settings",
+          "view callerId",
+          "view callerId info",
+          "view callerId information",
+          "view callerId settings",
+          "see caller ID",
+          "see caller ID info",
+          "see caller ID information",
+          "see caller ID settings",
+          "see callerId",
+          "see callerId info",
+          "see callerId information",
+          "see callerId settings",
+          "show caller ID",
+          "show caller ID info",
+          "show caller ID information",
+          "show caller ID settings",
+          "show callerId",
+          "show callerId info",
+          "show callerId information",
+          "show callerId settings",
+          "get caller ID",
+          "get caller ID info",
+          "get caller ID information",
+          "get caller ID settings",
+          "get callerId",
+          "get callerId info",
+          "get callerId information",
+          "get callerId settings"
+        ]
+      },
+      {
+        "name": "RcAssistantCompanyBillingPlanIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "company billing plan",
+          "view company billing plan",
+          "see company billing plan",
+          "show company billing plan",
+          "get company billing plan"
+        ]
+      },
+      {
+        "name": "RcAssistantCompanyGreetingIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "company greetings",
+          "view company greetings",
+          "see company greetings",
+          "show company greetings",
+          "get company greetings",
+          "company greeting",
+          "view company greeting",
+          "see company greeting",
+          "show company greeting",
+          "get company greeting"
+        ]
+      },
+      {
+        "name": "RcAssistantCompanyInfoIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "company info",
+          "company information",
+          "company details",
+          "view company info",
+          "view company information",
+          "view company details",
+          "see company info",
+          "see company information",
+          "see company details",
+          "show company info",
+          "show company information",
+          "show company details",
+          "get company info",
+          "get company information",
+          "get company details"
+        ]
+      },
+      {
+        "name": "RcAssistantCompanyServicePlanIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "company service plan",
+          "service plan for company",
+          "view company service plan",
+          "view service plan for company",
+          "see company service plan",
+          "see service plan for company",
+          "show company service plan",
+          "show service plan for company",
+          "get company service plan",
+          "get service plan for company"
+        ]
+      },
+      {
+        "name": "RcAssistantCompanyTimeZoneIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "company time zone",
+          "company timezone",
+          "company time-zone",
+          "view company time zone",
+          "view company timezone",
+          "view company time-zone",
+          "see company time zone",
+          "see company timezone",
+          "see company time-zone",
+          "show company time zone",
+          "show company timezone",
+          "show company time-zone",
+          "get company time zone",
+          "get company timezone",
+          "get company time-zone"
+        ]
+      },
+      {
+        "name": "RcAssistantEditBusinessHoursIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit business hours",
+          "edit office hours",
+          "edit working hours",
+          "edit operating hours",
+          "edit hours of operation",
+          "change business hours",
+          "change office hours",
+          "change working hours",
+          "change operating hours",
+          "change hours of operation",
+          "update business hours",
+          "update office hours",
+          "update working hours",
+          "update operating hours",
+          "update hours of operation",
+          "set business hours",
+          "set office hours",
+          "set working hours",
+          "set operating hours",
+          "set hours of operation",
+          "alter business hours",
+          "alter office hours",
+          "alter working hours",
+          "alter operating hours",
+          "alter hours of operation",
+          "modify business hours",
+          "modify office hours",
+          "modify working hours",
+          "modify operating hours",
+          "modify hours of operation",
+          "edit business hour",
+          "edit office hour",
+          "edit working hour",
+          "edit operating hour",
+          "edit hour of operation",
+          "change business hour",
+          "change office hour",
+          "change working hour",
+          "change operating hour",
+          "change hour of operation",
+          "update business hour",
+          "update office hour",
+          "update working hour",
+          "update operating hour",
+          "update hour of operation",
+          "set business hour",
+          "set office hour",
+          "set working hour",
+          "set operating hour",
+          "set hour of operation",
+          "alter business hour",
+          "alter office hour",
+          "alter working hour",
+          "alter operating hour",
+          "alter hour of operation",
+          "modify business hour",
+          "modify office hour",
+          "modify working hour",
+          "modify operating hour",
+          "modify hour of operation"
+        ]
+      },
+      {
+        "name": "RcAssistantEditCallerIdIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit caller ID",
+          "edit caller ID settings",
+          "edit caller ID information",
+          "edit caller ID info",
+          "change caller ID",
+          "change caller ID settings",
+          "change caller ID information",
+          "change caller ID info",
+          "update caller ID",
+          "update caller ID settings",
+          "update caller ID information",
+          "update caller ID info",
+          "set caller ID",
+          "set caller ID settings",
+          "set caller ID information",
+          "set caller ID info",
+          "alter caller ID",
+          "alter caller ID settings",
+          "alter caller ID information",
+          "alter caller ID info",
+          "modify caller ID",
+          "modify caller ID settings",
+          "modify caller ID information",
+          "modify caller ID info",
+          "edit callerID",
+          "edit callerID settings",
+          "edit callerID information",
+          "edit callerID info",
+          "change callerID",
+          "change callerID settings",
+          "change callerID information",
+          "change callerID info",
+          "update callerID",
+          "update callerID settings",
+          "update callerID information",
+          "update callerID info",
+          "set callerID",
+          "set callerID settings",
+          "set callerID information",
+          "set callerID info",
+          "alter callerID",
+          "alter callerID settings",
+          "alter callerID information",
+          "alter callerID info",
+          "modify callerID",
+          "modify callerID settings",
+          "modify callerID information",
+          "modify callerID info"
+        ]
+      },
+      {
+        "name": "RcAssistantEditDndStatusIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit DnD status to {dndStatusType}",
+          "edit DnD status",
+          "edit do not disturb status to {dndStatusType}",
+          "edit do not disturb status",
+          "change DnD status to {dndStatusType}",
+          "change DnD status",
+          "change do not disturb status to {dndStatusType}",
+          "change do not disturb status",
+          "update DnD status to {dndStatusType}",
+          "update DnD status",
+          "update do not disturb status to {dndStatusType}",
+          "update do not disturb status",
+          "set DnD status to {dndStatusType}",
+          "set DnD status",
+          "set do not disturb status to {dndStatusType}",
+          "set do not disturb status",
+          "alter DnD status to {dndStatusType}",
+          "alter DnD status",
+          "alter do not disturb status to {dndStatusType}",
+          "alter do not disturb status",
+          "modify DnD status to {dndStatusType}",
+          "modify DnD status",
+          "modify do not disturb status to {dndStatusType}",
+          "modify do not disturb status",
+          "{dndStatusType}",
+          "{dndStatusType} right now"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "edit it to {dndStatusType}",
+              "change it to {dndStatusType}",
+              "update it to {dndStatusType}",
+              "set it to {dndStatusType}",
+              "alter it to {dndStatusType}",
+              "modify it to {dndStatusType}"
+            ],
+            "slotType": "RcAssistantDndStatusType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Do you want to set your Do Not Disturb to **Take All Calls**, **Do Not Accept Any Calls**, **Take Department Calls Only** or **Do Not Accept Any Calls**?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "dndStatusType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantEditNotificationSettingsIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit notification settings",
+          "edit notification settings for {notificationSettingsType}",
+          "edit {notificationSettingsAlertType} notification settings",
+          "edit {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "change notification settings",
+          "change notification settings for {notificationSettingsType}",
+          "change {notificationSettingsAlertType} notification settings",
+          "change {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "update notification settings",
+          "update notification settings for {notificationSettingsType}",
+          "update {notificationSettingsAlertType} notification settings",
+          "update {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "set notification settings",
+          "set notification settings for {notificationSettingsType}",
+          "set {notificationSettingsAlertType} notification settings",
+          "set {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "alter notification settings",
+          "alter notification settings for {notificationSettingsType}",
+          "alter {notificationSettingsAlertType} notification settings",
+          "alter {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "modify notification settings",
+          "modify notification settings for {notificationSettingsType}",
+          "modify {notificationSettingsAlertType} notification settings",
+          "modify {notificationSettingsAlertType} notification settings for {notificationSettingsType}",
+          "{notificationSettingsActionType} notifications",
+          "{notificationSettingsActionType} notifications for {notificationSettingsType}",
+          "{notificationSettingsActionType} {notificationSettingsAlertType} notifications",
+          "{notificationSettingsActionType} {notificationSettingsAlertType} notifications for {notificationSettingsType}",
+          "edit alert settings",
+          "edit alert settings for {alertSettingsType}",
+          "edit {alertSettingsAlertType} alert settings",
+          "edit {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "change alert settings",
+          "change alert settings for {alertSettingsType}",
+          "change {alertSettingsAlertType} alert settings",
+          "change {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "update alert settings",
+          "update alert settings for {alertSettingsType}",
+          "update {alertSettingsAlertType} alert settings",
+          "update {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "set alert settings",
+          "set alert settings for {alertSettingsType}",
+          "set {alertSettingsAlertType} alert settings",
+          "set {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "alter alert settings",
+          "alter alert settings for {alertSettingsType}",
+          "alter {alertSettingsAlertType} alert settings",
+          "alter {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "modify alert settings",
+          "modify alert settings for {alertSettingsType}",
+          "modify {alertSettingsAlertType} alert settings",
+          "modify {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "{alertSettingsActionType} alerts",
+          "{alertSettingsActionType} alerts for {alertSettingsType}",
+          "{alertSettingsActionType} {alertSettingsAlertType} alerts",
+          "{alertSettingsActionType} {alertSettingsAlertType} alerts for {alertSettingsType}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "{NotificationSettingsActionType} notifications",
+              "{NotificationSettingsActionType} notification",
+              "{NotificationSettingsActionType} alerts",
+              "{NotificationSettingsActionType} alert"
+            ],
+            "slotType": "RcAssistantNotificationSettingsActionType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Do you want to **enable** or **disable** notifications?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "notificationSettingsActionType"
+          },
+          {
+            "sampleUtterances": [
+              "{NotificationSettingsAlertType} notifications",
+              "{NotificationSettingsAlertType} notification",
+              "{NotificationSettingsAlertType} alerts",
+              "{NotificationSettingsAlertType} alert"
+            ],
+            "slotType": "RcAssistantNotificationSettingsAlertType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Do you want to change **sms** or **email** notifications?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "notificationSettingsAlertType"
+          },
+          {
+            "sampleUtterances": [
+              "notification settings for {notificationSettingsType}",
+              "{notificationSettingsType} notification settings",
+              "alert settings for {alertSettingsType}",
+              "{alertSettingsType} alert settings"
+            ],
+            "slotType": "RcAssistantNotificationSettingsType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "notification settings for **voicemail**, **in-fax**, **out-fax**, **in-text** or **missed call**?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "notificationSettingsType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantEditPersonalInfoIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit personal info",
+          "edit personal information",
+          "edit personal details",
+          "change personal info",
+          "change personal information",
+          "change personal details",
+          "update personal info",
+          "update personal information",
+          "update personal details",
+          "set personal info",
+          "set personal information",
+          "set personal details",
+          "alter personal info",
+          "alter personal information",
+          "alter personal details",
+          "modify personal info",
+          "modify personal information",
+          "modify personal details"
+        ]
+      },
+      {
+        "name": "RcAssistantEditUserStatusIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "edit my user status to {userStatusType}",
+          "edit my user status",
+          "edit my status to {userStatusType}",
+          "edit my status",
+          "edit user status to {userStatusType}",
+          "edit user status",
+          "edit status to {userStatusType}",
+          "edit status",
+          "change my user status to {userStatusType}",
+          "change my user status",
+          "change my status to {userStatusType}",
+          "change my status",
+          "change user status to {userStatusType}",
+          "change user status",
+          "change status to {userStatusType}",
+          "change status",
+          "update my user status to {userStatusType}",
+          "update my user status",
+          "update my status to {userStatusType}",
+          "update my status",
+          "update user status to {userStatusType}",
+          "update user status",
+          "update status to {userStatusType}",
+          "update status",
+          "set my user status to {userStatusType}",
+          "set my user status",
+          "set my status to {userStatusType}",
+          "set my status",
+          "set user status to {userStatusType}",
+          "set user status",
+          "set status to {userStatusType}",
+          "set status",
+          "alter my user status to {userStatusType}",
+          "alter my user status",
+          "alter my status to {userStatusType}",
+          "alter my status",
+          "alter user status to {userStatusType}",
+          "alter user status",
+          "alter status to {userStatusType}",
+          "alter status",
+          "modify my user status to {userStatusType}",
+          "modify my user status",
+          "modify my status to {userStatusType}",
+          "modify my status",
+          "modify user status to {userStatusType}",
+          "modify user status",
+          "modify status to {userStatusType}",
+          "modify status"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "edit status to {userStatusType}",
+              "change status to {userStatusType}",
+              "update status to {userStatusType}",
+              "set status to {userStatusType}",
+              "alter status to {userStatusType}",
+              "modify status to {userStatusType}"
+            ],
+            "slotType": "RcAssistantUserStatusType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Do you want to update your status to **available**, **busy** or **offline**?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "userStatusType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantServicesIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "services",
+          "{serviceAvailabilityType} services",
+          "services {serviceAvailabilityType}",
+          "view services",
+          "view {serviceAvailabilityType} services",
+          "view services {serviceAvailabilityType}",
+          "see services",
+          "see {serviceAvailabilityType} services",
+          "see services {serviceAvailabilityType}",
+          "show services",
+          "show {serviceAvailabilityType} services",
+          "show services {serviceAvailabilityType}",
+          "get services",
+          "get {serviceAvailabilityType} services",
+          "get services {serviceAvailabilityType}",
+          "list services",
+          "list {serviceAvailabilityType} services",
+          "list services {serviceAvailabilityType}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "{serviceAvailabilityType} services",
+              "services {serviceAvailabilityType}"
+            ],
+            "slotType": "RcAssistantServiceAvailabilityType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "**enabled** services or **disabled** services?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "serviceAvailabilityType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantHelloIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "hello",
+          "hi",
+          "hey",
+          "hi there",
+          "good morning",
+          "good afternoon",
+          "good evening"
+        ]
+      },
+      {
+        "name": "RcAssistantHelpIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "show commands for {helpType}",
+          "show commands",
+          "list commands for {helpType}",
+          "list commands",
+          "show command for {helpType}",
+          "show command",
+          "list command for {helpType}",
+          "list command",
+          "help me with {helpType}",
+          "show features for {helpType}",
+          "show feature for {helpType}",
+          "help",
+          "help me",
+          "I need help"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "help me with {helpType}",
+              "show commands for {helpType}",
+              "show feature for {helpType}"
+            ],
+            "slotType": "RcAssistantHelpType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "I can help you with the following:\n* **Company Information**\n* **Notifications Settings**\n* **Personal Information**\n* **Presence information**\n* **Caller ID setting**\nWhat do you need help with?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "helpType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantNotificationSettingsIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "notification settings",
+          "notification settings for {notificationSettingsType}",
+          "{notificationSettingsType} notification settings",
+          "view notification settings",
+          "view notification settings for {notificationSettingsType}",
+          "view {notificationSettingsType} notification settings",
+          "see notification settings",
+          "see notification settings for {notificationSettingsType}",
+          "see {notificationSettingsType} notification settings",
+          "show notification settings",
+          "show notification settings for {notificationSettingsType}",
+          "show {notificationSettingsType} notification settings",
+          "get notification settings",
+          "get notification settings for {notificationSettingsType}",
+          "get {notificationSettingsType} notification settings",
+          "list notification settings",
+          "list notification settings for {notificationSettingsType}",
+          "list {notificationSettingsType} notification settings",
+          "alert settings",
+          "alert settings for {notificationSettingsType}",
+          "{notificationSettingsType} alert settings",
+          "view alert settings",
+          "view alert settings for {notificationSettingsType}",
+          "view {notificationSettingsType} alert settings",
+          "see alert settings",
+          "see alert settings for {notificationSettingsType}",
+          "see {notificationSettingsType} alert settings",
+          "show alert settings",
+          "show alert settings for {notificationSettingsType}",
+          "show {notificationSettingsType} alert settings",
+          "get alert settings",
+          "get alert settings for {notificationSettingsType}",
+          "get {notificationSettingsType} alert settings",
+          "list alert settings",
+          "list alert settings for {notificationSettingsType}",
+          "list {notificationSettingsType} alert settings"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "notification settings for {notificationSettingsType}",
+              "{notificationSettingsType} notification settings",
+              "alert settings for {alertSettingsType}",
+              "{alertSettingsType} alert settings"
+            ],
+            "slotType": "RcAssistantNotificationSettingsType",
+            "slotTypeVersion": "1",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "notification settings for **voicemail**, **in-fax**, **out-fax**, **in-text** or **missed call**?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "notificationSettingsType"
+          }
+        ]
+      },
+      {
+        "name": "RcAssistantPersonalInfoIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "personal info",
+          "personal information",
+          "personal details",
+          "personal settings",
+          "my personal info",
+          "my personal information",
+          "my personal details",
+          "my personal settings",
+          "view personal info",
+          "view personal information",
+          "view personal details",
+          "view personal settings",
+          "view my personal info",
+          "view my personal information",
+          "view my personal details",
+          "view my personal settings",
+          "see personal info",
+          "see personal information",
+          "see personal details",
+          "see personal settings",
+          "see my personal info",
+          "see my personal information",
+          "see my personal details",
+          "see my personal settings",
+          "show personal info",
+          "show personal information",
+          "show personal details",
+          "show personal settings",
+          "show my personal info",
+          "show my personal information",
+          "show my personal details",
+          "show my personal settings",
+          "get personal info",
+          "get personal information",
+          "get personal details",
+          "get personal settings",
+          "get my personal info",
+          "get my personal information",
+          "get my personal details",
+          "get my personal settings"
+        ]
+      },
+      {
+        "name": "RcAssistantPresenceInfoIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "presence",
+          "presence info",
+          "presence information",
+          "presence details",
+          "status",
+          "status info",
+          "status information",
+          "status details",
+          "do not disturb status",
+          "dnd status",
+          "user status",
+          "view presence",
+          "view presence info",
+          "view presence information",
+          "view presence details",
+          "view status",
+          "view status info",
+          "view status information",
+          "view status details",
+          "view do not disturb status",
+          "view dnd status",
+          "view user status",
+          "see presence",
+          "see presence info",
+          "see presence information",
+          "see presence details",
+          "see status",
+          "see status info",
+          "see status information",
+          "see status details",
+          "see do not disturb status",
+          "see dnd status",
+          "see user status",
+          "show presence",
+          "show presence info",
+          "show presence information",
+          "show presence details",
+          "show status",
+          "show status info",
+          "show status information",
+          "show status details",
+          "show do not disturb status",
+          "show dnd status",
+          "show user status",
+          "get presence",
+          "get presence info",
+          "get presence information",
+          "get presence details",
+          "get status",
+          "get status info",
+          "get status information",
+          "get status details",
+          "get do not disturb status",
+          "get dnd status",
+          "get user status",
+          "list presence",
+          "list presence info",
+          "list presence information",
+          "list presence details",
+          "list status",
+          "list status info",
+          "list status information",
+          "list status details",
+          "list do not disturb status",
+          "list dnd status",
+          "list user status"
+        ]
+      }
+    ],
+    "slotTypes": [
+      {
+        "description": "Business Hours Type",
+        "name": "RcAssistantBusinessHoursType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "personal",
+            "synonyms": [
+              "my",
+              "for me",
+              "for myself"
+            ]
+          },
+          {
+            "value": "company",
+            "synonyms": [
+              "office",
+              "enterprise",
+              "organization",
+              "institute",
+              "institution"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "Notification Settings Type",
+        "name": "RcAssistantNotificationSettingsType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "voicemail",
+            "synonyms": [
+              "voicemails",
+              "voice mail",
+              "voice mails"
+            ]
+          },
+          {
+            "value": "in-fax",
+            "synonyms": [
+              "in fax",
+              "incoming fax",
+              "inbound fax"
+            ]
+          },
+          {
+            "value": "in-text",
+            "synonyms": [
+              "in text",
+              "incoming text",
+              "inbound text"
+            ]
+          },
+          {
+            "value": "out-fax",
+            "synonyms": [
+              "out fax",
+              "outgoing fax",
+              "outbound fax"
+            ]
+          },
+          {
+            "value": "missed call",
+            "synonyms": [
+              "missed calls"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "Help Type",
+        "name": "RcAssistantHelpType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "company info",
+            "synonyms": [
+              "company information",
+              "company details"
+            ]
+          },
+          {
+            "value": "notification settings",
+            "synonyms": [
+              "notification info",
+              "notification information",
+              "notifications",
+              "alert settings",
+              "alert info",
+              "alert information",
+              "alerts"
+            ]
+          },
+          {
+            "value": "caller ID",
+            "synonyms": [
+              "caller ID info",
+              "caller ID information",
+              "caller ID settings",
+              "callerId",
+              "callerId info",
+              "callerId information",
+              "callerId settings"
+            ]
+          },
+          {
+            "value": "personal info",
+            "synonyms": [
+              "personal information",
+              "personal settings",
+              "personal details"
+            ]
+          },
+          {
+            "value": "presence",
+            "synonyms": [
+              "presence info",
+              "presence information",
+              "presence details",
+              "status",
+              "status info",
+              "status information",
+              "status details",
+              "do not disturb status",
+              "dnd status",
+              "user status"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "Service Availability Type",
+        "name": "RcAssistantServiceAvailabilityType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "enabled",
+            "synonyms": [
+              "active",
+              "available",
+              "accessible"
+            ]
+          },
+          {
+            "value": "disabled",
+            "synonyms": [
+              "inactive",
+              "unavailable",
+              "inaccessible"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "User Status Type",
+        "name": "RcAssistantUserStatusType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "available",
+            "synonyms": [
+              "free"
+            ]
+          },
+          {
+            "value": "busy",
+            "synonyms": []
+          },
+          {
+            "value": "offline",
+            "synonyms": []
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "DnD Status Type",
+        "name": "RcAssistantDndStatusType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "TakeAllCalls",
+            "synonyms": [
+              "take all calls",
+              "accept all calls",
+              "answer all calls",
+              "all calls"
+            ]
+          },
+          {
+            "value": "DoNotAcceptAnyCalls",
+            "synonyms": [
+              "do not take any calls",
+              "do not accept any calls",
+              "do not answer any calls",
+              "no calls"
+            ]
+          },
+          {
+            "value": "TakeDepartmentCallsOnly",
+            "synonyms": [
+              "department calls only",
+              "take department calls only",
+              "accept department calls only",
+              "answer department calls only"
+            ]
+          },
+          {
+            "value": "DoNotAcceptDepartmentCalls",
+            "synonyms": [
+              "do not take department calls",
+              "do not accept department calls",
+              "do not answer department calls",
+              "no department calls"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "Notification Settings Action Type",
+        "name": "RcAssistantNotificationSettingsActionType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "enable",
+            "synonyms": [
+              "send",
+              "receive",
+              "start"
+            ]
+          },
+          {
+            "value": "disable",
+            "synonyms": [
+              "stop",
+              "don't send",
+              "don't receive"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "Notification Settings Alert Type",
+        "name": "RcAssistantNotificationSettingsAlertType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "sms",
+            "synonyms": [
+              "short message",
+              "text message"
+            ]
+          },
+          {
+            "value": "email",
+            "synonyms": [
+              "e-mail"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      }
+    ],
+    "voiceId": "0",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 600,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I did not understand, can you rephrase that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Please try again."
+        }
+      ]
+    }
+  }
+}
