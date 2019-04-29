@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Compression;
 using Newtonsoft.Json;
 
 namespace AmazonLexGenerator.Demo.RcAssistant
@@ -43,7 +44,12 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
             lex.Prefixify(); // prefix intents and slot types with resource name to avoid naming collisions
-            File.WriteAllText("lex.json", lex.ToJsonString());
+            File.WriteAllText("generated/lex.json", lex.ToJsonString());
+            if (File.Exists("lex.zip"))
+            {
+                File.Delete("lex.zip");
+            }
+            ZipFile.CreateFromDirectory("generated", "lex.zip", CompressionLevel.Optimal, false);
         }
     }
 }
