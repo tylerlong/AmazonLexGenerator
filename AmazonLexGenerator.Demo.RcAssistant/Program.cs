@@ -18,7 +18,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new CompanyTimeZoneIntent(),
                 new EditBusinessHoursIntent(),
                 new EditCallerIdIntent(),
-                // todo: edit dnd status intent
+                new EditDndStatusIntent(),
                 // todo: edit notification settings intent
                 new EditPersonalInfoIntent(),
                 new EditUserStatusIntent(),
