@@ -10,7 +10,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                     "business hours",
                     "{businessHoursType} business hours",
                     "business hours for {businessHoursType}"
-                }).Variant("hours", "hour");
+                }).Variant("business hours", "business hour");
             slots = new[]
             {
                 new Slot(new BusinessHoursType())

@@ -15,7 +15,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 .Cartesian(new[] {"notifications"})
                 .Cartesian(new[] {"", "for {notificationSettingsType}"});
             sampleUtterances = utterances1.Concat(utterances2).ToArray()
-                .Variant("notification", "alert");
+                .Variant(" notification", " alert");
             slots = new[]
             {
                 new Slot(new NotificationSettingsActionType()),

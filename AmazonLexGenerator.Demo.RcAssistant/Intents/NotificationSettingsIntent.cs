@@ -10,7 +10,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                     "notification settings",
                     "notification settings for {notificationSettingsType}",
                     "{notificationSettingsType} notification settings"
-                }).Variant("notification settings", "alert settings");
+                }).Variant(" notification settings", " alert settings");
             slots = new[]
             {
                 new Slot(new NotificationSettingsType())

@@ -451,41 +451,41 @@
           "{notificationSettingsActionType} {notificationSettingsAlertType} notifications",
           "{notificationSettingsActionType} {notificationSettingsAlertType} notifications for {notificationSettingsType}",
           "edit alert settings",
-          "edit alert settings for {alertSettingsType}",
-          "edit {alertSettingsAlertType} alert settings",
-          "edit {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "edit alert settings for {notificationSettingsType}",
+          "edit {notificationSettingsAlertType} alert settings",
+          "edit {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
           "change alert settings",
-          "change alert settings for {alertSettingsType}",
-          "change {alertSettingsAlertType} alert settings",
-          "change {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "change alert settings for {notificationSettingsType}",
+          "change {notificationSettingsAlertType} alert settings",
+          "change {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
           "update alert settings",
-          "update alert settings for {alertSettingsType}",
-          "update {alertSettingsAlertType} alert settings",
-          "update {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "update alert settings for {notificationSettingsType}",
+          "update {notificationSettingsAlertType} alert settings",
+          "update {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
           "set alert settings",
-          "set alert settings for {alertSettingsType}",
-          "set {alertSettingsAlertType} alert settings",
-          "set {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "set alert settings for {notificationSettingsType}",
+          "set {notificationSettingsAlertType} alert settings",
+          "set {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
           "alter alert settings",
-          "alter alert settings for {alertSettingsType}",
-          "alter {alertSettingsAlertType} alert settings",
-          "alter {alertSettingsAlertType} alert settings for {alertSettingsType}",
+          "alter alert settings for {notificationSettingsType}",
+          "alter {notificationSettingsAlertType} alert settings",
+          "alter {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
           "modify alert settings",
-          "modify alert settings for {alertSettingsType}",
-          "modify {alertSettingsAlertType} alert settings",
-          "modify {alertSettingsAlertType} alert settings for {alertSettingsType}",
-          "{alertSettingsActionType} alerts",
-          "{alertSettingsActionType} alerts for {alertSettingsType}",
-          "{alertSettingsActionType} {alertSettingsAlertType} alerts",
-          "{alertSettingsActionType} {alertSettingsAlertType} alerts for {alertSettingsType}"
+          "modify alert settings for {notificationSettingsType}",
+          "modify {notificationSettingsAlertType} alert settings",
+          "modify {notificationSettingsAlertType} alert settings for {notificationSettingsType}",
+          "{notificationSettingsActionType} alerts",
+          "{notificationSettingsActionType} alerts for {notificationSettingsType}",
+          "{notificationSettingsActionType} {notificationSettingsAlertType} alerts",
+          "{notificationSettingsActionType} {notificationSettingsAlertType} alerts for {notificationSettingsType}"
         ],
         "slots": [
           {
             "sampleUtterances": [
-              "{NotificationSettingsActionType} notifications",
-              "{NotificationSettingsActionType} notification",
-              "{NotificationSettingsActionType} alerts",
-              "{NotificationSettingsActionType} alert"
+              "{notificationSettingsActionType} notifications",
+              "{notificationSettingsActionType} notification",
+              "{notificationSettingsActionType} alerts",
+              "{notificationSettingsActionType} alert"
             ],
             "slotType": "RcAssistantNotificationSettingsActionType",
             "slotTypeVersion": "1",
@@ -505,10 +505,10 @@
           },
           {
             "sampleUtterances": [
-              "{NotificationSettingsAlertType} notifications",
-              "{NotificationSettingsAlertType} notification",
-              "{NotificationSettingsAlertType} alerts",
-              "{NotificationSettingsAlertType} alert"
+              "{notificationSettingsAlertType} notifications",
+              "{notificationSettingsAlertType} notification",
+              "{notificationSettingsAlertType} alerts",
+              "{notificationSettingsAlertType} alert"
             ],
             "slotType": "RcAssistantNotificationSettingsAlertType",
             "slotTypeVersion": "1",
@@ -530,8 +530,8 @@
             "sampleUtterances": [
               "notification settings for {notificationSettingsType}",
               "{notificationSettingsType} notification settings",
-              "alert settings for {alertSettingsType}",
-              "{alertSettingsType} alert settings"
+              "alert settings for {notificationSettingsType}",
+              "{notificationSettingsType} alert settings"
             ],
             "slotType": "RcAssistantNotificationSettingsType",
             "slotTypeVersion": "1",
@@ -800,8 +800,6 @@
           "list notification settings",
           "list notification settings for {notificationSettingsType}",
           "list {notificationSettingsType} notification settings",
-          "alert settings",
-          "alert settings for {notificationSettingsType}",
           "{notificationSettingsType} alert settings",
           "view alert settings",
           "view alert settings for {notificationSettingsType}",
@@ -824,8 +822,8 @@
             "sampleUtterances": [
               "notification settings for {notificationSettingsType}",
               "{notificationSettingsType} notification settings",
-              "alert settings for {alertSettingsType}",
-              "{alertSettingsType} alert settings"
+              "alert settings for {notificationSettingsType}",
+              "{notificationSettingsType} alert settings"
             ],
             "slotType": "RcAssistantNotificationSettingsType",
             "slotTypeVersion": "1",

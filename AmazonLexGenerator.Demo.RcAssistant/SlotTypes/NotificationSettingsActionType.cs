@@ -13,10 +13,10 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             promptMessage = "Do you want to **enable** or **disable** notifications?";
             sampleUtterances = new[]
                 {
-                    "{NotificationSettingsActionType} notifications",
-                    "{NotificationSettingsActionType} notification",
+                    "{notificationSettingsActionType} notifications",
+                    "{notificationSettingsActionType} notification",
                 }
-                .Variant("notification", "alert");
+                .Variant(" notification", " alert");
         }
     }
 }

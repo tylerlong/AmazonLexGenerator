@@ -13,10 +13,10 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             promptMessage = "Do you want to change **sms** or **email** notifications?";
             sampleUtterances = new[]
                 {
-                    "{NotificationSettingsAlertType} notifications",
-                    "{NotificationSettingsAlertType} notification",
+                    "{notificationSettingsAlertType} notifications",
+                    "{notificationSettingsAlertType} notification",
                 }
-                .Variant("notification", "alert");
+                .Variant(" notification", " alert");
         }
     }
 }

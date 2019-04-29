@@ -5,7 +5,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
         public CompanyGreetingIntent() : base("CompanyGreetingIntent", null)
         {
             sampleUtterances = new[] {"", "view", "see", "show", "get"}
-                .Cartesian(new[] {"company greetings"}).Variant("greetings", "greeting");
+                .Cartesian(new[] {"company greetings"}).Variant("company greetings", "company greeting");
         }
     }
 }
