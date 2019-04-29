@@ -41,10 +41,8 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                 new NotificationSettingsAlertType(),
             };
             var lex = new Lex(new Resource("RcAssistant", intents, slotTypes));
-            Console.WriteLine(JsonConvert.SerializeObject(lex, Formatting.Indented, new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore
-            }));
+            lex.Prefixify(); // prefix intents and slot types with resource name to avoid naming collision
+            Console.WriteLine(lex.ToJsonString());
         }
     }
 }
