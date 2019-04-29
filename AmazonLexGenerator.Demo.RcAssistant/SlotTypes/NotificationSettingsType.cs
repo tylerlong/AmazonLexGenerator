@@ -19,7 +19,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
                     "notification settings for {notificationSettingsType}",
                     "{notificationSettingsType} notification settings",
                 }
-                .Variant("notification settings", "alert settings");
+                .Variant("notification", "alert");
         }
     }
 }
