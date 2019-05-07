@@ -49,6 +49,7 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             {
                 File.Delete("lex.zip");
             }
+
             ZipFile.CreateFromDirectory("generated", "lex.zip", CompressionLevel.Optimal, false);
         }
     }

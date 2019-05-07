@@ -7,8 +7,8 @@ namespace AmazonLexGenerator.Demo.RcAssistant
             enumerationValues = new[]
             {
                 new EnumerationValue(new[] {"personal", "my", "for me", "for myself"}),
-                new EnumerationValue(new[]
-                    {"company", "office", "enterprise", "organization", "institute", "institution"}
+                new EnumerationValue(new[] {"", "my"}.Cartesian(new[]
+                    {"company", "office", "enterprise", "organization", "institute", "institution"})
                 )
             };
             promptMessage = "**personal** business hours or **company** business hours?";
